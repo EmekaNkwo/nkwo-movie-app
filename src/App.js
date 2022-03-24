@@ -52,7 +52,8 @@ function App() {
         </div>
 
         {noMovies && <h2>No Movie Avaliable, Search for a Movie</h2>}
-     
+         
+         {!noMovies && (
           <div className="movielist-section">
             <div>
               <MovieListHeader
@@ -77,6 +78,9 @@ function App() {
               />
             </div>
           </div>
+        )}
+     
+        
         
       </div>
     </div>
