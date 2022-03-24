@@ -1,0 +1,13 @@
+.search-bar {
+  margin: 2rem 0;
+}
+
+.search-bar > input {
+  width: 100%;
+  padding: 0.9rem;
+  outline: none;
+  margin-top: 0.5rem;
+}
+.search-bar > h2 {
+  font-size: 1.1rem;
+}

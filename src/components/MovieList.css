@@ -1,0 +1,54 @@
+.list-container {
+  display: flex;
+  margin: 1rem 0;
+}
+.movie-item {
+  width: 100%;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.movie-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.movie-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  transition: 0.3s ease;
+  opacity: 0;
+  bottom: 100px;
+  font-size: 0.9rem;
+  padding: 15px;
+  text-align: center;
+}
+
+.movie-item > img {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+}
+
+.movie-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  margin-top: 0.5rem;
+  text-align: center;
+  margin: 1rem auto;
+  width: 200px;
+  color: rgb(235, 235, 235);
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 480px) {
+  .movie-item > img {
+    width: 200px;
+    height: 200px;
+  }
+}
