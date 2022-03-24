@@ -14,26 +14,14 @@ function App() {
   const [favourites, setFavourites] = useState([]);
 
   const noMovies = !movies || (movies && movies.length === 0);
-  //   const noFavourites = !favourites || (movies && movies.length === 0);
+ 
 
   const getMovies = (searchValue) => {
-    axios
-      .get(`http://www.omdbapi.com/?s=${searchValue}&apikey=263d22d8`)
+    axios.get(`http://www.omdbapi.com/?s=${searchValue}&apikey=263d22d8`)
       .then((response) => {
         setMovies(response.data.Search);
       });
   };
-
-  //   const getMovies = async (searchValue) => {
-  //     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=263d22d8`;
-
-  //     const response = await fetch(url);
-  //     const responseJson = await response.json();
-
-  //     if (responseJson.Search) {
-  //       setMovies(responseJson.Search);
-  //     }
-  //   };
 
   const addFavouriteMovie = (movie) => {
     const newFavouriteList = [...favourites, movie];
