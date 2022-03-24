@@ -51,7 +51,7 @@ function App() {
           />
         </div>
 
-        //{noMovies && <h2>No Movie Avaliable, Search for a Movie</h2>}
+        {noMovies && <h2>No Movie Avaliable, Search for a Movie</h2>}
      
           <div className="movielist-section">
             <div>
